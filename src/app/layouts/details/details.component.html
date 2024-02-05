@@ -1,0 +1,21 @@
+<h1 class="title">💾 DETALLES 💾</h1>
+<div class="container">
+  <div class="detail-form"><div *ngIf="task" class="form-container">
+    <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+      <h1>
+        {{task.title}}
+      </h1>
+  
+      <div class="p-inputgroup description">
+        <textarea id="description" formControlName="description" placeholder="DESCRIPCION" class="p-inputtext"></textarea>
+      </div>
+  
+      <div class="p-inputgroup localizacion">
+        <input id="location" type="text" formControlName="location" class="p-inputtext" placeholder="LOCALIZACIÓN"/>
+      </div>
+  
+      <button type="submit" pButton label="Save" class="p-button" *ngIf="task.description">Modificar</button>
+      <button type="submit" pButton label="Save" class="p-button" *ngIf="!task.description">Crear</button>
+    </form>
+  </div></div>
+</div>

@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  justify-content:center;
+  
+}
+
+.detail-form {
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+  width:30%;
+  box-shadow: 6px 7px 30px -11px rgba(0,0,0,0.75);
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.description textarea{
+  height:300px;
+  margin-bottom: 1rem;
+}
+
+.localizacion {
+  margin-bottom: 1rem;
+}
+
+.form-container {
+  width:80%;
+}

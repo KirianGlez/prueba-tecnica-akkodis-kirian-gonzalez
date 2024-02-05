@@ -1,0 +1,16 @@
+.todo-list {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height:500px;
+  background-color:white;
+  border-radius: 15px;
+  width:30%;
+  box-shadow: 6px 7px 30px -11px rgba(0,0,0,0.75);
+  
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
