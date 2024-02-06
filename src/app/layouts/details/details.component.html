@@ -1,6 +1,8 @@
+
 <h1 class="title">💾 DETALLES 💾</h1>
 <div class="container">
   <div class="detail-form"><div *ngIf="task" class="form-container">
+    <a routerLink="/home">Volver</a>
     <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
       <h1>
         {{task.title}}
