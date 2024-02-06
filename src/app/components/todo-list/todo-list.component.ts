@@ -7,10 +7,9 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
-  styleUrls: ['./todo-list.component.scss']
+  styleUrls: ['./todo-list.component.scss'],
 })
 export class TodoListComponent implements OnInit {
-
   tasks$: Observable<Task[]>;
   newTask: Task = new Task(0, '');
 
@@ -18,7 +17,6 @@ export class TodoListComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadTasks();
-    
   }
 
   private loadTasks(): void {
@@ -27,7 +25,9 @@ export class TodoListComponent implements OnInit {
 
   addTask() {
     if (this.newTask.title.trim() !== '') {
-      this.taskService.addTask(this.newTask).subscribe(task => {this.router.navigate(['/task-details', task.id.toString()]);})
+      this.taskService.addTask(this.newTask).subscribe((task) => {
+        this.router.navigate(['/task-details', task.id.toString()]);
+      });
       this.loadTasks();
     }
   }
@@ -39,5 +39,14 @@ export class TodoListComponent implements OnInit {
 
   viewDetails(task: Task): void {
     this.router.navigate(['/task-details', task.id.toString()]);
+  }
+
+  checkFinish(task: Task) {
+    if (task.finish) {
+      task.finish = false;
+    } else {
+      task.finish = true;
+    }
+    this.taskService.updateTask(task);
   }
 }

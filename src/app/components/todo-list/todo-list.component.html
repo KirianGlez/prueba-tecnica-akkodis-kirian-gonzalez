@@ -5,6 +5,7 @@
   </div>
   <ul>
     <li *ngFor="let task of tasks$ | async; let i = index" class="p-listitem">
+      <input type="checkbox" (change)="checkFinish(task)"[checked]="task.finish">
       <div>{{ task.title }}</div>
       <div><button (click)="deleteTask(i)" class="p-button p-button-danger delete-button">🗑️</button>
         <button (click)="viewDetails(task)" class="p-button p-button-info details-button">👁️</button></div>
