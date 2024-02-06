@@ -2,6 +2,24 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.1.
 
+## Prueba en local
+
+Para ejecutar este proyecto en local sigue los siguientes pasos:
+Tener instalado una versión de node y angular compatible con el proyecto (angular-cli 10.2.1)
+Clonar el proyecto
+Hacer un npm install en la raíz del proyecto para instalar las librerías
+Ejecutar npm start en la raíz del proyecto para levantarlo en local
+Acceder en el navegador a `http://localhost:4200/`
+
+## Instrucciones
+
+Para crear una instrucción tienes que insertar el título de la tarea en el cuadro de nueva tarea y pulsar en el botón +
+Esto te lleva a una pantalla donde añadir la descripción y la ubicación.
+Al finalizar pulsar el botón crear y te redirige a la pantalla principal con la lista de todas las tareas
+Para eliminar alguna pulsar el botón de la papelera.
+Para ver los detalles de alguna pulsar el botón del ojo
+desde esta pantalla también puedes modificar la descripción y la ubicación
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
